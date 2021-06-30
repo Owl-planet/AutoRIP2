@@ -8,5 +8,8 @@
 </head>
 <body>
     <!-- Henüz tamamlanmadı -->
+    <?php 
+        // Henüz tamamlanmadı
+    ?>
 </body>
 </html>
