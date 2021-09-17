@@ -1,0 +1,43 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf%}
+
+{% block title %}
+Sign Up
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='css/signup.css')}}">
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://img.icons8.com/material-outlined/24/000000/customer-insight.png" />
+{% endblock %}
+
+{% block content %}
+<header data-aos="fade-down" data-aos-duration="900">
+    <img class="logo" alt="logo" src="https://i.ibb.co/jgWvZdG/Logo.png" />
+    <nav>
+        <ul class="nav__links">
+            <li><a href="/login">Home</a></li>
+            <li><a href="/Contact">Contact</a></li>
+            <li><a href="/About">About</a></li>
+        </ul>
+    </nav>
+    <a class="cta" href="/login"><button>Sign In</button></a>
+</header>
+<div data-aos="fade-down" data-aos-duration="900" class="container">
+    <form class="form-signin" method="POST" action="/signup">
+        <h2 style="color: white; font-family: Kiona; text-align: center;" class="form-signin-heading">Please Sign Up</h2>
+        {{form.hidden_tag()}}
+        {{wtf.form_field(form.username, class="SignUpArea", placeholder="Enter Username", autocomplete="off")}}
+        {{wtf.form_field(form.email, class="SignUpArea", placeholder="Enter Email", autocomplete="off")}}
+        {{wtf.form_field(form.password, class="SignUpArea", placeholder="Enter Password", autocomplete="off")}}<br>
+        <button class="btn btn-lg btn-primary btn-block bbtn-style" type="submit">Sign Up</button>
+    </form>
+</div> <!-- /container -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>new Vue({ el: ".container" });</script>
+<script>AOS.init();</script>
+{% endblock %}

@@ -1,0 +1,111 @@
+/* Fonts */
+@font-face {
+  font-family: Kiona;
+  src: url(../fonts/Kiona.ttf);
+}
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
+body {
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Section */
+
+.loginArea {
+  /* Form Stil Ayarları */
+  width: 40%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #464646;
+  background-color: transparent;
+  outline: none;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+.form-signin:first-child {
+  margin-top: 1%;
+}
+.bbtn-style {
+  width: 40%;
+  padding: 7px;
+  margin-left: 30%;
+  margin-right: 30%;
+  font-family: Kiona;
+}
+#remember {
+  margin-left: 28.5%;
+  float: right;
+}
+.RememberBoxArea {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  margin-left: 31%;
+  font-family: Kiona;
+  margin-top: -34.8px;
+}
+
+/* Header */
+header li,
+header a,
+header button {
+  font-family: Kiona;
+  font-weight: 500;
+  font-size: 17.3px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+header .logo {
+  cursor: pointer;
+  width: 130px;
+  height: 130px;
+}
+
+header .nav__links {
+  list-style: none;
+}
+
+header .nav__links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+header .nav__links li a {
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+header .nav__links li a:hover {
+  color: #0088a9;
+}
+
+header button {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+header button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}

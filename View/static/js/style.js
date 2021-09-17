@@ -1,1 +1,0 @@
-// Henüz tamamlanmadı
