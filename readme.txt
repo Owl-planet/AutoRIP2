@@ -1,1 +1,1 @@
-Yakında tamamlanıcak 
+Yakında tamamlanacak 
